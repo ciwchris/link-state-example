@@ -1,0 +1,11 @@
+type NetworkStatus {
+  isConnected: Boolean!
+}
+
+type Query {
+  networkStatus: NetworkStatus!
+}
+
+type Mutation {
+  updateNetworkStatus(isConnected: Boolean!): Boolean
+}

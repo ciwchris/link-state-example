@@ -1,7 +1,24 @@
+/* tslint:disable */
 export namespace NetworkStatus {
+  export type Variables = {};
+
   export type Query = {
-    networkStatus: {
-      isConnected: boolean;
-    };
+    __typename?: "Query";
+    networkStatus: NetworkStatus;
+  };
+
+  export type NetworkStatus = {
+    __typename?: "NetworkStatus";
+    isConnected: boolean;
+  };
+}
+export namespace UpdateNetworkStatus {
+  export type Variables = {
+    isConnected?: boolean | null;
+  };
+
+  export type Mutation = {
+    __typename?: "Mutation";
+    updateNetworkStatus?: boolean | null;
   };
 }
