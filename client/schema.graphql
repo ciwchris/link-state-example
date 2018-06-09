@@ -1,0 +1,11 @@
+type ServerData {
+    name: String!
+}
+
+type Query {
+    serverData: ServerData!
+}
+
+type Mutation {
+    updateServerData(name: String!): String
+}
