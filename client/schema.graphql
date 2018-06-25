@@ -1,11 +1,23 @@
+type LocalData {
+    name: String!
+}
+
 type ServerData {
     name: String!
 }
 
-type Query {
+type AllData {
     serverData: ServerData!
+    localData: LocalData!
+}
+
+type Query {
+    allData: AllData!
+    serverData: ServerData!
+    localData: LocalData!
 }
 
 type Mutation {
+    updateLocalData(name: String!): String
     updateServerData(name: String!): String
 }
